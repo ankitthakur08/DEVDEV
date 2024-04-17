@@ -1,0 +1,8 @@
+&lt;!DOCTYPE html&gt; 
+&lt;html lang="en"&gt; 
+&lt;head&gt; &lt;title&gt;A simple HTML document&lt;/title&gt; &lt;/head&gt; 
+&lt;body&gt;
+ &lt;p&gt;Hello World!&lt;p&gt;
+ &lt;/body&gt;
+ &lt;/html&gt;
+
