@@ -1,45 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tags v/s Element</title>
     <style>
-        *{
+        * {
             background-color: rgb(248, 252, 241);
 
         }
     </style>
 </head>
+
 <body>
     <h1>Tags And Element</h1>
     <hr>
     <h2>HTML Element Syntax</h2>
-    <p>An HTML element is an individual component of an HTML document. It represents semantics, or meaning. For example, the title element represents the title of the document</p>
-     <p>Most HTML elements are written with a start tag (or opening tag) and an end tag (or closing tag), with content in between. Elements can also contain attributes that define its additional properties. For example, a paragraph, which is represented by the p element, would be written as:</p>
+    <p>An HTML element is an individual component of an HTML document. It represents semantics, or meaning. For example,
+        the title element represents the title of the document</p>
+    <p>Most HTML elements are written with a start tag (or opening tag) and an end tag (or closing tag), with content in
+        between. Elements can also contain attributes that define its additional properties. For example, a paragraph,
+        which is represented by the p element, would be written as:</p>
     <div>
-        <img src="images/tags.jpeg" alt="element syntax image">  
+        <img src="images/tags.jpeg" alt="element syntax image">
     </div>
     <b>this is bold</b>
     <p>We will learn about the HTML attributes in the <a href="html-102.html" target="_blank">next chapter.</a></p>
- <p> <strong>Note:</strong>  All elements don't require the end tag or closing tag to be present. These are referred as empty elements, self-closing elements or void elements.</p>
-<h2>HTML Tags Vs Elements</h2>
-<p>Technically, an HTML element is the collection of start tag, its attributes, an end tag and everything in between. On the other hand an HTML tag (either opening or closing) is used to mark the start or end of an element, as you can see in the above illustration.</p>
-<p>However, in common usage the terms HTML element and HTML tag are interchangeable i.e. a tag is an element is a tag. For simplicity's sake of this website, the terms "tag" and "element" are used to mean the same thing — as it will define something on your web page.
-</p>
-<h2>Case Insensitivity in HTML Tags and Attributes</h2>
+    <p> <strong>Note:</strong> All elements don't require the end tag or closing tag to be present. These are referred
+        as empty elements, self-closing elements or void elements.</p>
+    <h2>HTML Tags Vs Elements</h2>
+    <p>Technically, an HTML element is the collection of start tag, its attributes, an end tag and everything in
+        between. On the other hand an HTML tag (either opening or closing) is used to mark the start or end of an
+        element, as you can see in the above illustration.</p>
+    <p>However, in common usage the terms HTML element and HTML tag are interchangeable i.e. a tag is an element is a
+        tag. For simplicity's sake of this website, the terms "tag" and "element" are used to mean the same thing — as
+        it will define something on your web page.
+    </p>
+    <h2>Case Insensitivity in HTML Tags and Attributes</h2>
+    <p>In HTML, tag and attribute names are not case-sensitive (but most attribute values are case-sensitive). It means
+        the tag &lt;P&gt;, and the tag &lt;p&gt; defines the same thing in HTML which is a paragraph.</p>
+    <h3>Example</h3>
+    <pre>
+    <code>
+&lt;p&gt;This is a paragraph.&lt;/p&gt;
+&lt;P&gt;This is also a valid paragraph.&lt;/P&gt; 
+</code>
+</pre>
+    <p> <strong>Tip:</strong> We recommend using lowercase for tag and attributing names in HTML, since by doing this
+        you can make your document more compliant for future upgrades.</p>
+    <h2>Empty HTML Elements</h2>
+    <p>Empty elements (also called self-closing or void elements) are not container tags — that means, you can not write
+        &lt;hr&lt;some content&lt;/hr&lt; or &lt;br&lt;some content&lt;/br&lt;.</p>
+    <p>A typical example of an empty element, is the A typical example of an empty element, is the &lt;br&gt; element,
+        which represents a line break. Some other common empty elements are &lt;img&gt;, &lt;input&gt;, &lt;link&gt,
+        &lt;meta&gt;, &lt;hr&gt;, etc. &lt;br&gt; element, which represents a line break. Some other common empty
+        elements are &lt;img&gt;, &lt;input&gt;, &lt;link&gt;, &lt;meta&gt;, &lt;hr>&gt;, etc.</p>
+    <h3>Example</h3>
+    <pre>
+    <code>
+    &lt;p&gt;This paragraph contains &lt;br&gt; a line break.&lt;/p&gt;
+    &lt;img src="images/sky.jpg" alt="Cloudy Sky"&gt;
+    &lt;input type="text" name="username"&gt;
+    </code>
+</pre>
+    <p> <strong>Note:</strong> In HTML, a self-closing element is written simply as &lt;br&gt;. In XHTML, a self-closing
+        element requires a space and a trailing slash, such as &lt;br /&gt;. </p>
 
-<img src="images/tags.jpeg" alt="element syntax image"> 
-<b>this is bold</b>
-<b>this is bold</b> 
+    <h2>Nesting HTML Elements</h2>
+    <p>Most HTML elements can contain any number of further elements (except empty elements), which are, in turn, made
+        up of tags, attributes, and content or other elements.</p>
+    <h3>Example</h3>
+    &lt;p&gt;Here is some &lt;b&gt;bold&lt;/b&gt; text.&lt;/p&gt;
+    &lt;p&gt;Here is some &lt;em&gt;emphasized&lt;/em&gt; text.&lt;/p&gt;
+    &lt;p&gt;Here is some &lt;mark&gt;highlighted&lt;/mark&gt; text.&lt;/p&gt;
+    <p> <strong>Tip:</strong> Placing one element inside another is called nesting. A nested element, also called a
+        child element, can be a parent element too if other elements are nested within it. </p>
+    <p>HTML tags should be nested in correct order. They must be closed in the inverse order of how they are defined,
+        that means the last tag opened must be closed first.</p>
+    <h3>Example</h3>
+    <pre>
+    <code>
+&lt;p&gt;&lt;strong&gt;These tags are nested properly.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;These tags are not nested properly.&lt;/p&gt;&lt;/strong&gt;
+</code>
+</pre>
+    <h2>Writing Comments in HTML</h2>
+    <p>Comments are usually added with the purpose of making the source code easier to understand. It may help other
+        developer (or you in the future when you edit the source code) to understand what you were trying to do with the
+        HTML. Comments are not displayed in the browser.</p>
+    <p>An HTML comment begins with <!--, and ends with -->, as shown in the example below:</p>
+    <h3>Example</h3>
+    <pre>
+    <code>
+&lt;!-- This is an HTML comment --&gt;
+&lt;!-- This is a multi-line HTML comment 
+     that spans across more than one line --&gt;
+     &lt;p&gt;This is a normal piece of text.&lt;/p&gt;
+    </code>
+</pre>
+ <h3>Example</h3>
+ <pre>
+    <code>
+ &lt;!-- Hiding this image for testing
+&lt;img src="images/smiley.png" alt="Smiley"&gt;
+--&gt;
+</code>
+</pre>
 
-<h2>HTML Block and Inline Element</h2>
-<h2>HTML Elements Types</h2>
-<p>Elements can be placed in two distinct groups: block level and inline level elements. The former make up the document's structure, while the latter dress up the contents of a block.</p>
-<p>Also, a block element occupies 100% of the available width and it is rendered with a line break before and after. Whereas, an inline element will take up only as much space as it needs.</p>
-<p>The most commonly used block-level elements are &lt;div&gt;, &lt;p&gt;, &lt;h1&gt; through &lt;h6&gt;, &lt;form&gt;, &lt;ol&gt;, &lt;ul&gt;, &lt;li&gt;, and so on. Whereas, the commonly used inline-level elements are &lt;img&gt;, &lt;a&gt;, &lt;span&gt;, &lt;strong&gt;, &lt;b&gt;, &lt;em&gt;, &lt;i&gt;, &lt;code&gt;, &lt;input&gt;, &lt;button&gt;, etc.</p>
 
-<pre>
+
+
+
+    <h2>HTML Block and Inline Element</h2>
+    <h2>HTML Elements Types</h2>
+    <p>Elements can be placed in two distinct groups: block level and inline level elements. The former make up the
+        document's structure, while the latter dress up the contents of a block.</p>
+    <p>Also, a block element occupies 100% of the available width and it is rendered with a line break before and after.
+        Whereas, an inline element will take up only as much space as it needs.</p>
+    <p>The most commonly used block-level elements are &lt;div&gt;, &lt;p&gt;, &lt;h1&gt; through &lt;h6&gt;,
+        &lt;form&gt;, &lt;ol&gt;, &lt;ul&gt;, &lt;li&gt;, and so on. Whereas, the commonly used inline-level elements
+        are &lt;img&gt;, &lt;a&gt;, &lt;span&gt;, &lt;strong&gt;, &lt;b&gt;, &lt;em&gt;, &lt;i&gt;, &lt;code&gt;,
+        &lt;input&gt;, &lt;button&gt;, etc.</p>
+    <h3>Block Element</h3>
+    <hr>
+    <pre>
     <code>
 &lt;div&gt;
         &lt;img src="images/tags.jpeg" alt="element syntax image"&gt;  
@@ -49,7 +134,8 @@
 </pre>
     <h3>Output:</h3>
     <img src="images/divimg.jpg" alt="images/divimg.jpg">
-
+    <h3>Inline Element</h3>
+    <hr>
     <pre>
         <code>
             &lt;img src="images/tags.jpeg" alt="element syntax image"&gt; 
@@ -58,9 +144,10 @@
 
         </code>
     </pre>
-<h3>Output:</h3>
-<img src="images/notdivimg.jpg" alt="images/notdivimg.jpg">
+    <h3>Output:</h3>
+    <img src="images/notdivimg.jpg" alt="images/notdivimg.jpg">
 
 
-    </body>
+</body>
+
 </html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Text Formatting</title>
+</head>
+
+<body>
+    <h1>HTML Text Formatting</h1>
+    <h2>Formatting Text with HTML</h2>
+    <p>HTML provides several tags that you can use to make some text on your web pages to appear differently than normal
+        text, for example, you can use the tag &lt;b&gt; to make the text bold, tag &gt;i&gt; to make the text italic,
+        tag &lt;mark&gt; to highlight the text, tag &lt;code&gt; to display a fragment of computer code, tags
+        &lt;ins&gt; and &lt;del&gt; for marking editorial insertions and deletions, and more.</p>
+    <h3>Example</h3>
+    <pre>
+    <code>
+&lt;p&gt;This is &lt;b&gt;bold text&lt;/b&gt;.&lt;/p&gt;
+&lt;p&gt;This is &lt;strong&gt;strongly important text&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;This is &lt;i&gt;italic text&lt;/i&gt;.&lt;/p&gt;
+&lt;p&gt;This is &lt;em&gt;emphasized text&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;This is &lt;mark&gt;highlighted text&lt;/mark&gt;.&lt;/p&gt;
+&lt;p&gt;This is &lt;code&gt;computer code&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;This is &lt;small&gt;smaller text&lt;/small&gt;.&lt;/p&gt;
+&lt;p&gt;This is &lt;sub&gt;subscript&lt;/sub&gt; and &lt;sup&gt;superscript&lt;/sup&gt; text.&lt;/p&gt;
+&lt;p&gt;This is &lt;del&gt;deleted text&lt;/del&gt;.&lt;/p&gt;
+&lt;p&gt;This is &lt;ins&gt;inserted text&lt;/ins&gt;.&lt;/p&gt;
+    </code>
+</pre>
+    <a href="https://www.tutorialrepublic.com/codelab.php?topic=html&file=text-formatting" target="_blank">Output of
+        this code:</a>
+    <p>By default, the &lt;strong&gt; tag is typically rendered in the browser as &lt;b&gt;, whereas the &lt;em&gt; tag
+        is rendered as &lt;i&gt;. However, there is a difference in the meaning of these tags.</p>
+    <h2>Difference between &lt;strong&gt; and &lt;b&gt; tag</h2>
+    <p>Similarly, both &lt;em&gt; and &lt;i&gt; tags render the enclosed text in italic type by default, but the
+        &lt;em&gt; tag indicates that its contents have stressed emphasis compared to surrounding text, whereas the
+        &lt;i&gt; tag is used for marking up text that is set off from the normal text for readability reasons, such as
+        a technical term, an idiomatic phrase from another language, a thought, etc.</p>
+    <h3>Example</h3>
+    <pre>
+    <code>
+&lt;p&gt;Cats are &lt;em&gt;cute&lt;/em&gt; animals.&lt;/p&gt;
+&lt;p&gt;The &lt;i&gt;Royal Cruise&lt;/i&gt; sailed last night.&lt;/p&gt;
+</code>
+</pre>
+    <a href="https://www.tutorialrepublic.com/codelab.php?topic=html&file=strong-vs-b-tag">output of this code</a>
+    <p> <strong>Note:</strong> Use the &lt;em&gt; and &lt;strong&gt; tags when the content of your page requires that
+        certain words or phrases should have strong emphasis or importance. Also, in HTML5 the &lt;b&gt; and &lt;i&gt;
+        tags have been redefined, earlier they don't have semantic meaning. </p>
+    <h2>Formatting Quotations</h2>
+    <p>You can easily format the quotation blocks from other sources with the HTML &lt;blockquote&gt; tag.</p>
+    <p>Blockquotes are generally displayed with indented left and right margins, along with a little extra space added
+        above and below. Let's try an example to see how it works:</p>
+    <pre>
+    <code>
+        &lt;blockquote&gt;
+    &lt;p&gt;Learn from yesterday, live for today, hope for tomorrow. The important thing is not to stop questioning.&lt;/p&gt;
+    &lt;cite&gt;— Albert Einstein&lt;/cite&gt;
+&lt;/blockquote&gt;
+    </code>
+</pre>
+    <a href="https://www.tutorialrepublic.com/codelab.php?topic=html&file=block-quotations">output of this code:</a>
+    <p> <strong>Tip:</strong> The cite tag is used to describe a reference to a creative work. It must include the title
+        of that work or the name of the author (people or organization) or an URL reference. </p>
+
+    <p>For short inline quotations, you can use the HTML &lt;q&gt; tag. Most browsers display inline quotes by
+        surrounding the text in quotation marks. Here's an example:</p>
+    <pre>
+    <code>
+        &lt;p&gt;According to the World Health Organization (WHO): &lt;q&gt;Health is a state of complete physical, mental, and social well-being.&lt;/q&gt;&lt;/p&gt;
+    </code>
+</pre>
+    <a href="https://www.tutorialrepublic.com/codelab.php?topic=html&file=inline-quotations">output of this code:</a>
+    <h2>Showing Abbreviations</h2>
+    <p>An abbreviation is a shortened form of a word, phrase, or name.</p>
+    <p>You can use the &lt;abbr&gt; tag to denote an abbreviation. The title attribute is used inside this tag to
+        provide the full expansion of the abbreviation, which is displayed by the browsers as a tooltip when the mouse
+        cursor is hovered over the element. Let's try out an example:</p>
+    <h3>Example</h3>
+    <pre>
+    <code>
+        &lt;p&gt;The &lt;abbr title="World Wide Web Consortium"&gt;W3C&lt;/abbr&gt; is the main international standards organization for the &lt;abbr title="World Wide Web"&gt;WWW or W3&lt;/abbr&gt;. It was was founded by Tim Berners-Lee.&lt;/p&gt;
+    </code>
+</pre>
+    <a href="https://www.tutorialrepublic.com/codelab.php?topic=html&file=showing-abbreviations">output of this
+        code:</a>
+    <h2>Marking Contact Addresses</h2>
+    <p>Web pages often include street or postal addresses. HTML provides a special tag &lt;address&gt; to represent
+        contact information (physical and/or digital) for a person, people or organization.</p>
+    <p>This tag should ideally used to display contact information related to the document itself, such as article's
+        author. Most browsers display an address block in italic. Here's an example:</p>
+    <h3>Example</h3>
+    <pre>
+    <code>
+    &lt;address&gt;
+    Mozilla Foundation&lt;br&gt;
+    331 E. Evelyn Avenue&lt;br&gt;
+    Mountain View, CA 94041, USA
+    &lt;/address&gt;
+    </code>
+</pre>
+<a href="https://www.tutorialrepublic.com/codelab.php?topic=html&file=formatting-addresses">output of this code:</a>
+<p>Please check out the HTML reference section for a complete list of <a href="htmlforms.html">HTML formatting tags</a> </p>
+
+</body>
+
+</html>

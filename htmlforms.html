@@ -1,37 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML Forms</title>
+
 </head>
+
 <body>
-  <div>
     <h1>HTML Forms</h1>
-   <label for="UserName">UserName:
-   <input type="text"></label> 
-</div>
-   <div>
-   <label for="UserPhone">Phone Number:
-    <input type="number">
-   </label>
-</div>
-<div>
-    <label for="Password">Password:
-        <input type="password">
-    </label>
-</div>
-<div>
-    <label for="Gender">Gender:
-        <input type="checkbox">M:
-        <input type="checkbox">F:
-    </label>
-</div>
-<div>
-    <label for="Choose">Choose:
-        <input type="text">
-    </label>
-</div>
-<button></button>
+    <form>
+        <div>
+
+            <label for="UserName">UserName:
+                <input type="text" placeholder="User Name" required></label>
+        </div>
+        <div>
+            <label for="email">email</label>
+            <input type="email" placeholder="enter email" required>
+        </div>
+        <div>
+            <label for="UserPhone">Phone Number:
+                <input type="tel" placeholder="9876543210">
+            </label>
+        </div>
+        <div>
+            <label for="Password">Password:
+                <input type="password" placeholder="Enter Password">
+            </label>
+        </div>
+        <div>
+            <input type="radio" name="gender">
+            <label for="male">male</label>
+            <input type="radio" name="gender">
+            <label for="Female">Female</label>
+        </div>
+        <div>
+            <label for="Choose city">Choose City</label>
+            <select name="City">
+                <option value="mohali">mohali</option>
+                <option value="delhi">delhi</option>
+                <option value="jalander">jalandar</option>
+                <option value="himachal">himachal</option>
+                <option value="una">una</option>
+            </select>
+
+        </div>
+        <div>
+            <label for="game">game:</label>
+            <input type="checkbox" name="soccer">
+            <label for="soccer">soccer</label>
+
+            <input type="checkbox" name="soccer">
+            <label for="football">football</label>
+
+            <input type="checkbox" name="soccer">
+            <label for="cricket">cricket</label>
+
+        </div>
+
+        <div>
+            <label for="checkbox">are you above 18? <br>
+                <label for="yes ">yes </label>
+                <input type="radio" name="18">
+                <label for="no">no</label>
+                <input type="radio" name="18">
+            </label>
+        </div>
+        <div>
+            <label for="Upload">Upload</label>
+            <input type="file">
+            <button type="submit">Upload</button>
+        </div>
+        <div>
+            <label for="address">address</label>
+            <textarea name="address" id="" cols="20" rows="5"></textarea>
+        </div>
+
+        <button type="submit" value="submit"> register </button>
+        <button type="reset" value="reset"> reset </button>
+
+    </form>
+
+
+
+
+    <div>
+        <h2>HTML5 input Types</h2>
+        <label>choose a color</label>
+        <input type="color"> <br>
+        <input type="date"> <br>
+        <input type="range"><br>
+        <input type="search"><br>
+        <input type="time"><br>
+        <input type="week"><br>
+        <input type="tel"><br>
+        <input type="datetime-local">
+
+<a href=""></a>
+    </div>
 </body>
+
 </html>
