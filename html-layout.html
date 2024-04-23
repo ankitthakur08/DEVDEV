@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTNL Layout</title>
+    <style>
+        table {
+            width: 400px;
+        }
+
+        table,
+        tr,
+        td {
+            border: 5px solid gray;
+        }
+
+        .bulletremove {
+         list-style: none;
+        }
+
+        td ul li a {
+            text-decoration: none;
+            color: black;
+            
+        }
+       
+
+        td h3 {
+            text-align: center;
+
+            /* padding: 10px 73px; */
+        }
+
+        .headercolor {
+            background-color: rgb(163, 151, 173);
+            text-align: center;
+        }
+
+        .footercolor {
+            background-color: rgb(182, 170, 194);
+        }
+
+        tbody {
+            background-color: aqua;
+        }
+
+        tr td h2 {
+            color: brown;
+        }
+
+        td,
+        h2,
+        p {
+            text-align: center;
+        }
+
+        /* td h2{
+    text-align: center;
+   } */
+    </style>
+</head>
+
+<body>
+    <table>
+        <tr class="headercolor">
+            <td colspan="2">
+                <h1>Table tutorial</h1>
+            </td>
+
+        </tr>
+        <tbody>
+            <tr>
+                <td>
+                    <ul class="bulletremove">
+                        <li><i><a href="">Home</a></i></li>
+                        <li><i><a href="">About</a></i></li>
+                        <li><i><a href="">Contact Us</a></i></li>
+                        <li><i><a href="">Cource</a></i></li>
+                    </ul>
+                </td>
+                <td>
+                    <h2>Welcome here</h2>
+                    <p><i>Let start.....</i></p>
+                </td>
+            </tr>
+        </tbody>
+        <tr>
+            <td class="footercolor" colspan="2">
+                <h3 colspan="2">@ copywrite 2001</h3>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>
