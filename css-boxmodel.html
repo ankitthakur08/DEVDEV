@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css Box Model</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box1{
+            background-color: rgb(233, 93, 221);
+            height: 60px;
+            width: 200px;
+            border: 2px solid black; 
+            padding: 5%;
+            margin: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+           /* margin: 15px 0 15x 0; */
+
+         
+        }
+        .box2{
+            background-color: aqua;
+            height: 100px;
+            width: 250px;
+            /* margin-top: 5px; */
+            border: 2px solid brown;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .outerbox{
+            border: 3px solid rebeccapurple;
+            width: 400px;
+            background-color: aqua;
+            justify-content: center;
+            display: flex;
+            align-items: center;
+            padding: 15px 0 15px 0;
+            margin-bottom: 10px;
+
+            
+        }
+        ol li{
+            list-style: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="outerbox">
+    <div class="box1">
+        <ol>
+            <li>hello</li>
+            <li>hello</li>
+            <li>hello</li>
+            <li>hello</li>
+            
+        </ol></div> </div>
+    <div class="box2">hello</div> 
+    
+</body>
+</html>
