@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selector-CSS</title>
+</head>
+
+<body>
+    <h1>CSS Selectors</h1>
+    <hr>
+    In this tutorial you will learn how to use CSS selectors for applying style rules to elements.
+
+
+    <hr>
+    <h2>What is Selector?
+    </h2>
+    <p>A CSS selector is a pattern to match the elements on a web page. The style rules associated with that selector
+        will be applied to the elements that match the selector pattern.
+
+    </p>
+    <p>Selectors are one of the most important aspects of CSS as they allow you to target specific elements on your web
+        page in various ways so that they can be styled.
+
+    </p>
+    <p>Several types of selectors are available in CSS, let's take a closer look at them:
+
+    </p>
+    <h2>Universal Selector
+    </h2>
+
+    <p>The universal selector, denoted by an asterisk (*), matches every single element on the page.
+
+    </p>
+    <p>The universal selector may be omitted if other conditions exist on the element. This selector is often used to
+        remove the default margins and paddings from the elements for quick testing purpose.
+
+    </p>
+    <p>Let's try out the following example to understand how it basically works:
+
+    </p>
+    <h3>Example</h3>
+    <pre><code>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+    </code></pre>
+    <h4><a href="https://www.tutorialrepublic.com/codelab.php?topic=css&file=universal-selector">output of the code</a>
+    </h4>
+    <p>The style rules inside the * selector will be applied to every element in a document.
+
+    </p>
+
+    <p> <strong>Note:</strong> It is recommended not to use the universal selector (*) too often in a production
+        environment, since this selector matches every element on a web page that puts too much of unnecessary pressure
+        on the browsers. Use element type or class selector instead.</p>
+
+    <h2>Element Type Selectors
+    </h2>
+    <p>An element type selector matches all instance of the element in the document with the corresponding element type
+        name. Let's try out an example to see how it actually works:
+
+    </p>
+    <h3>Example</h3>
+    <pre><code>
+    p {
+        color: blue;
+    }
+</code></pre>
+    <h4><a href="https://www.tutorialrepublic.com/codelab.php?topic=css&file=element-type-selector">output of the
+            code</a> </h4>
+
+    <p>The style rules inside the p selector will be applied on every &lt;p&gt; element (or paragraph) in the document
+        and color it blue, regardless of their position in the document tree.
+
+    </p>
+    <hr>
+    <h2>Id Selectors
+    </h2>
+    <p>The id selector is used to define style rules for a single or unique element.
+
+    </p>
+    <p>The id selector is defined with a hash sign (#) immediately followed by the id value.
+
+    </p>
+    <h3>Example</h3>
+    <pre><code>
+    #error {
+        color: red;
+    }
+</code></pre>
+    <h4><a href="https://www.tutorialrepublic.com/codelab.php?topic=css&file=id-selector">output of the code</a></h4>
+
+    <p>This style rule renders the text of an element in red, whose id attribute is set to error.
+
+    </p>
+    <p> <strong>Note:</strong> The value of an id attribute must be unique within a given document — meaning no two
+        elements in your HTML document can share the same id value.
+
+    </p>
+    <hr>
+    <h2>Class Selectors
+    </h2>
+    <p>The class selectors can be used to select any HTML element that has a class attribute. All the elements having
+        that class will be formatted according to the defined rule.
+
+    </p>
+    <p>The class selector is defined with a period sign (.) immediately followed by the class value.
+
+    </p>
+    <h3>Example</h3>
+    <pre><code>
+    .blue {
+        color: blue;
+    }
+</code></pre>
+    <h4><a href="https://www.tutorialrepublic.com/codelab.php?topic=css&file=class-selector-01">Output of the code</a>
+    </h4>
+
+    <p>The above style rules renders the text in blue of every element in the document that has class attribute set to
+        blue. You can make it a bit more particular. For example:
+
+    </p>
+    <h3>Example</h3>
+    <pre><code>
+    p.blue {
+        color: blue;
+    }
+</code></pre>
+    <h4><a href="https://www.tutorialrepublic.com/codelab.php?topic=css&file=class-selector-02"> output of the code </a>
+    </h4>
+    <p>The style rule inside the selector p.blue renders the text in blue of only those
+    <p> elements that has class attribute set to blue, and has no effect on other paragraphs.
+
+    </p>
+    <hr>
+    <h2>Descendant Selectors
+    </h2>
+    <p>You can use these selectors when you need to select an element that is the descendant of another element, for
+        example, if you want to target only those anchors that are contained within an unordered list, rather than
+        targeting all anchor elements. Let's see how it works:
+
+    </p>
+    <h3>Example</h3>
+    <pre><code>
+        ul.menu li a {
+            text-decoration: none;
+        }
+        h1 em {
+            color: green;
+        }
+    </code></pre>
+    <h4><a href="https://www.tutorialrepublic.com/codelab.php?topic=css&file=descendant-selectors">output of the code
+        </a></h4>
+    <p>The style rules inside the selector ul.menu li a applied to only those <a> elements that contained inside an
+            &lt;ul&gt; element having the class .menu, and has no effect on other links inside the document.
+
+    </p>
+    <p>Similarly, the style rules inside the h1 em selector will be applied to only those &lt;em&gt; elements that
+        contained inside the &lt;h1&gt; element and has not effect on other &lt;em&gt; elements.
+
+    </p>
+    <hr>
+    <h2>Child Selectors
+    </h2>
+    <p>A child selector is used to select only those elements that are the direct children of some element.
+
+    </p>
+    <p>A child selector is made up of two or more selectors separated by a greater than symbol (>). You can use this
+        selector, for instance, to select the first level of list elements inside a nested list that has more than one
+        level. Let's check out an example to understand how it works:
+
+    </p>
+    <h3>Example</h3>
+    <pre><code>
+            ul > li {
+                list-style: square;
+            }
+            ul > li ol {
+                list-style: none;
+            }
+        </code></pre>
+    <h4><a href="https://www.tutorialrepublic.com/codelab.php?topic=css&file=child-selectors">Output of the code </a>
+    </h4>
+    <p>The style rule inside the selector ul > li applied to only those &lt;li&gt; elements that are direct children of
+        the &lt;ul&gt; elements, and has no effect on other list elements.
+
+    </p>
+    <hr>
+    <h2>Adjacent Sibling Selectors
+    </h2>
+    <p>The adjacent sibling selectors can be used to select sibling elements (i.e. elements at the same level). This
+        selector has the syntax like: E1 + E2, where E2 is the target of the selector.
+
+    </p>
+    <p>The selector h1 + p in the following example will select the &lt;p&gt; elements only if both the &lt;h1&gt; and
+        &lt;p&gt; elements share the same parent in the document tree and &lt;h1&gt; is immediately precedes the
+        &lt;p&gt; element. That means only those paragraphs that come immediately after each &lt;h1&gt; heading will
+        have the associated style rules. Let's see how this selector actually works:
+
+    </p>
+    <h3>Example</h3>
+    <pre><code>
+        h1 + p {
+            color: blue;
+            font-size: 18px;
+        }
+        ul.task + p {
+            color: #f0f;
+            text-indent: 30px;
+        }
+    </code></pre>
+    <h4><a href="https://www.tutorialrepublic.com/codelab.php?topic=css&file=adjacent-sibling-selectors"> output of the
+            code </a></h4>
+            <hr><h2>General Sibling Selectors</h2>
+            <p>The general sibling selector is similar to the adjacent sibling selector (E1 + E2), but it is less strict. A general sibling selector is made up of two simple selectors separated by the tilde (∼) character. It can be written like: E1 ∼ E2, where E2 is the target of the selector.
+
+            </p>
+            <p>The selector h1 ∼ p in the example below will select all the &lt;p&gt; elements that preceded by the &lt;h1&gt; element, where all the elements share the same parent in the document tree.
+
+            </p>
+            <h3>Example</h3>
+            <pre><code>
+                h1 ∼ p {
+                    color: blue;
+                    font-size: 18px;
+                }
+                ul.task ∼ p {
+                    color: #f0f;
+                    text-indent: 30px;
+                }
+            </code></pre>
+            <h4><a href="https://www.tutorialrepublic.com/codelab.php?topic=css&file=general-sibling-selectors"> output of the code</a></h4>
+             <p>There are more sophisticated selectors like attribute selectors, pseudo-classes, pseudo-elements. We will discuss about these selectors in detail in the upcoming chapters.
+
+             </p>
+             <hr>
+             <h2>Grouping Selectors
+            </h2>
+            <p>Often several selectors in a style sheet share the same style rules declarations. You can group them into a comma-separated list to minimize the code in your style sheet. It also prevents you from repeating the same style rules over and over again. Let's take a look:
+
+            </p>
+            <h3>Example</h3>
+            <pre><code>
+                h1 {
+                    font-size: 36px;
+                    font-weight: normal;
+                }
+                h2 {
+                    font-size: 28px;
+                    font-weight: normal;
+                }
+                h3 {
+                    font-size: 22px;
+                    font-weight: normal;
+                }
+            </code></pre>
+            <h4><a href="https://www.tutorialrepublic.com/codelab.php?topic=css&file=selectors-without-grouping">output of the code </a></h4>
+            <p>As you can see in the above example, the same style rule font-weight: normal; is shared by the selectors h1, h2 and h3, so it can be grouped in a comma-separated list, like this:</p>
+            <h3>Example</h3>
+            <pre><code>
+                h1, h2, h3 {
+                    font-weight: normal;
+                }
+                h1 {
+                    font-size: 36px;
+                }
+                h2 {
+                    font-size: 28px;
+                }
+                h3 {
+                    font-size: 22px;
+                }
+            </code></pre>
+            <h4><a href="https://www.tutorialrepublic.com/codelab.php?topic=css&file=grouping-selectors">output of the code </a></h4>
+            
+            <a href="getting-started.html"> previous  page </a>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="color.html"> Next page </a>
+
+
+
+
+
+
+</body>
+
+</html>

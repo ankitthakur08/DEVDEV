@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Getting Started CSS</title>
+</head>
+
+<body>
+
+    <h1>CSS Getting Started</h1>
+    <hr>
+    A CSS file is simply a plain text file saved with the .css extension.
+    <hr>
+    <h2>Getting Started with CSS</h2>
+    <p>In this tutorial you'll learn how easy it is to add style and formatting information to the web pages using CSS.
+        But, before we begin, make sure that you have some working knowledge of HTML.
+
+    </p>
+    <p>If you're just starting out in the world of web development, <a
+            href="https://www.tutorialrepublic.com/html-tutorial/">start learning from here »</a>
+
+    </p>
+    <p>Without further ado, let's get started with the Cascading Style Sheets (CSS).
+
+    </p>
+    <h2>Including CSS in HTML Documents</h2>
+    <p>CSS can either be attached as a separate document or embedded in the HTML document itself. There are three
+        methods of including CSS in an HTML document:
+
+    </p>
+    <ul>
+        <li><strong>Inline styles —</strong> Using the style attribute in the HTML start tag.
+        </li>
+        <li> <strong>Embedded styles —</strong> Using the &lt;style&gt; element in the head section of a document.
+        </li>
+        <li> <strong>External style sheets —</strong> Using the &lt;link&gt; element, pointing to an external CSS file.
+        </li>
+    </ul>
+    <p>In this tutorial we will cover all these three methods for inserting CSS one by one.
+
+    </p>
+    <p><strong>Note:</strong> The inline styles have the highest priority, and the external style sheets have the
+        lowest. It means if you specify styles for an element in both embedded and external style sheets, the
+        conflicting style rules in the embedded style sheet would override the external style sheet.</p>
+
+    <h2>Inline Styles</h2>
+    <p>Inline styles are used to apply the unique style rules to an element by putting the CSS rules directly into the
+        start tag. It can be attached to an element using the style attribute.
+
+    </p>
+    <p>The style attribute includes a series of CSS property and value pairs. Each "property: value" pair is separated
+        by a semicolon (;), just as you would write into an embedded or external style sheets. But it needs to be all in
+        one line i.e. no line break after the semicolon, as shown here:
+
+    </p>
+    <h3>Example
+
+    </h3>
+    <pre> <code>
+    &lt;h1 style="color:red; font-size:30px;"&gt;This is a heading&lt;/h1&gt;
+&lt;p style="color:green; font-size:22px;"&gt;This is a paragraph.&lt;/p&gt;
+&lt;div style="color:blue; font-size:14px;"&gt;This is some text content.&lt;/div&gt;
+</code></pre>
+
+    <h4><a href="https://www.tutorialrepublic.com/codelab.php?topic=css&file=inline-styles">output of the code</a></h4>
+
+    <p>Using the inline styles are generally considered as a bad practice. As style rules are embedded directly inside
+        the HTML tag, it causes the presentation to become mixed with the content of the document; which makes the code
+        hard to maintain and negates the purpose of using CSS</p>
+
+    <p>Note: It's become impossible to style <a
+            href="https://www.tutorialrepublic.com/css-tutorial/css-pseudo-elements.php">pseudo-elements</a> and <a
+            href="https://www.tutorialrepublic.com/css-tutorial/css-pseudo-classes.php">pseudo-classes</a> with inline
+        styles. You should, therefore, avoid the use of style attributes in your code. Using external style sheets is
+        the preferred way to add styles to the HTML documents.</p>
+
+    <hr>
+    <h2>Embedded Style Sheets
+    </h2>
+    <p>Embedded or internal style sheets only affect the document they are embedded in.
+
+    </p>
+    <p>Embedded style sheets are defined in the &lt;head&gt; section of an HTML document using the &lt;style&gt;
+        element. You can define any number of &lt;style&gt; elements in an HTML document but they must appear between
+        the &lt;head&gt; and &lt;/head&gt; tags. Let's take a look at an example:
+
+    </p>
+    <h3>Example</h3>
+    <pre><code>
+    &lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;title&gt;My HTML Document&lt;/title&gt;
+    &lt;style&gt;
+        body { background-color: YellowGreen; }
+        p { color: #fff; }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;This is a heading&lt;/h1&gt;
+    &lt;p&gt;This is a paragraph of text.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+    <h4><a href="https://www.tutorialrepublic.com/codelab.php?topic=css&file=embedded-style-sheet">output of the code
+        </a></h4>
+    <p>Tip: The type attribute of the &lt;style&gt; and &lt;link&gt; tag (i.e. type="text/css") defines the language of
+        the style sheet. This attribute is purely informative. You can omit this since CSS is the standard and default
+        style sheet language in HTML5.</p>
+    <hr>
+    <h2>External Style Sheets</h2>
+    <p>An external style sheet is ideal when the style is applied to many pages of the website.
+
+    </p>
+    <p>An external style sheet holds all the style rules in a separate document that you can link from any HTML file on
+        your site. External style sheets are the most flexible because with an external style sheet, you can change the
+        look of an entire website by changing just one file.
+
+    </p>
+    <p>You can attach external style sheets in two ways — linking and importing.
+
+    </p>
+    <h2>Linking External Style Sheets
+    </h2>
+    <p>Before linking, we need to create a style sheet first. Let's open your favorite code editor and create a new
+        file. Now type the following CSS code inside this file and save it as "style.css".
+
+    </p>
+    <h3>Example</h3>
+    <pre><code>
+            body {
+                background: lightyellow;
+                font: 18px Arial, sans-serif;
+            }
+            h1 {
+                color: orange;
+            }
+        </code></pre>
+
+
+    <p>An external style sheet can be linked to an HTML document using the &lt;link&gt; tag. The &lt;link&gt; tag goes
+        inside the &lt;head&gt; section, as you can see in the following example:
+
+    </p>
+
+    <h3>Example</h3>
+    <pre><code>
+            &lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;title&gt;My HTML Document&lt;/title&gt;
+    &lt;link rel="stylesheet" href="css/style.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;This is a heading&lt;/h1&gt;
+    &lt;p&gt;This is a paragraph of text.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html
+        </code></pre>
+    <h4><a href="https://www.tutorialrepublic.com/codelab.php?topic=css&file=linking-external-style-sheet">output of the
+            code </a></h4>
+
+
+    <p> <strong>Tip:</strong> Among all the three methods, using external style sheet is the best method for defining
+        and applying styles to the HTML documents. As you can clearly see with external style sheets, the affected HTML
+        file require minimal changes in the markup.</p>
+
+        <h2>Importing External Style Sheets</h2>
+        <p>The @import rule is another way of loading an external style sheet. The @import statement instructs the browser to load an external style sheet and use its styles.
+
+        </p>
+        <p>You can use it in two ways. The simplest is within the header of your document. Note that, other CSS rules may still be included in the &lt;style&gt; element. Here's an example:
+
+        </p>
+
+        <h4>Example</h4>
+        <pre><code>
+            &lt;style&gt;
+    @import url("css/style.css");
+    p {
+        color: blue;
+        font-size: 16px;
+    }
+&lt;/style&gt;
+        </code></pre>
+        <h4><a href="https://www.tutorialrepublic.com/codelab.php?topic=css&file=importing-external-style-sheet"> output of the code </a></h4>
+        <p>Similarly, you can use the @import rule to import a style sheet within another style sheet.
+
+        </p>
+        <h4>Example</h4>
+        <pre><code>
+            @import url("css/layout.css");
+@import url("css/color.css");
+body {
+    color: blue;
+    font-size: 14px;
+}
+        </code></pre>
+        <h4><a href="https://www.tutorialrepublic.com/codelab.php?topic=css&file=import-rule">output of the code </a></h4>
+        <p> <strong>Note:</strong> All @import rules must occur at the start of the style sheet. Any style rule defined in the style sheet itself override the conflicting rules in the imported style sheets. However, importing a style sheet within another style sheet is not recommended due to performance issue.</p>
+
+        <a href="intro-css.html"> previous  page </a>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="selector.html"> Next page </a>
+
+
+
+
+</body>
+
+</html>

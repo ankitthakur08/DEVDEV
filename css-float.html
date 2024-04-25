@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css Float</title>
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  
+  <style>
+        
+        .box1 {
+            border: 3px solid black;
+            padding: 5px;
+            height: 200px;
+            max-height: 350px;
+            background-color: rgb(165, 147, 182);
+            margin-bottom: 10px;
+
+        }
+
+        .box {
+            border-radius: 10px;
+            border: 2px solid rgb(7, 5, 5);
+            margin: 10px;
+            display: flow-root;
+            width: 70px;
+            float: inline-end;
+            text-align: center;
+            /* text-align: center; */
+            box-sizing: border-box;
+
+
+
+        }
+
+        img {
+            border-radius: 15px;
+            width: 200px;
+            height: 180px;
+            float: left;
+            border: 3px solid rgb(10, 10, 10);
+            margin-right: 10px;
+
+        }
+
+        .body {
+            background-color: aquamarine;
+            font-family: "Poppins", sans-serif;
+
+        }
+
+        /*css of the iframe page*/
+        iframe {
+            height: 500px;
+            width: 1100px;
+            position: relative;
+            border: 5px solid green;
+           
+           
+        }
+
+        frame {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+           
+         
+        }
+        div ul li,a{
+            list-style: none;
+            margin: 5px;
+            text-decoration: none;
+        }
+        .sidebar{
+            border: 5px solid red;
+            width: 150px;
+            height: 500px;
+            float: left;
+            margin-right: 5px;
+            display: flex;
+            justify-content: left;
+            
+            
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="box1">
+        <img src="images/himachal.jpg" alt="images/himachal.jpg">
+        <h1>Css tutorial</h1>
+        <div class="box">home</div>
+        <div class="box">about</div>
+        <div class="box box4">Contact</div>
+    </div>
+    <div class="sidebar">
+        <ul>
+            <li><a href="html-101.html" target="Myframe">Css intro</a></li>
+            <li><a href="css-introduction.html" target="Myframe">Css intro</a></li>
+            <li><a href="css-introduction.html" target="Myframe">Css intro</a></li>
+            <li><a href="css-introduction.html" target="Myframe">Css intro</a></li>
+            <li><a href="css-introduction.html" target="Myframe">Css intro</a></li>
+            <li><a href="css-introduction.html" target="Myframe">Css intro</a></li>
+            <li><a href="css-introduction.html" target="Myframe">Css intro</a></li>
+            <li><a href="css-introduction.html" target="Myframe">Css intro</a></li>
+            <li><a href="css-introduction.html" target="Myframe">Css intro</a></li>
+            <li><a href="css-introduction.html" target="Myframe">Css intro</a></li>
+            <li><a href="css-introduction.html" target="Myframe">Css intro</a></li>
+            <li><a href="css-introduction.html" target="Myframe">Css intro</a></li>
+            <li><a href="css-introduction.html" target="Myframe">Css intro</a></li>
+        </ul>
+
+    </div>
+    <div class="frame">
+  
+        <iframe src="" frameborder="5" name="Myframe"></iframe>
+    </div>
+</body>
+
+</html>
