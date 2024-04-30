@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css flex box</title>
+    <style>
+        .container {
+            /* row-gap: 10px;
+            column-gap: 10px; */
+            border: 3px solid black;
+            display: flex;
+            /* justify-content: center;
+            align-content: center; */
+            flex-flow: row wrap;
+            height: 500px;
+
+
+        }
+
+        .items {
+            height: 30px;
+            width: 40px;
+            border: 3px solid rgb(10, 252, 90);
+            margin: 10px;
+        }
+
+        .item1 {
+            background-color: aqua;
+            /* flex-grow: 1; */
+            /* flex-shrink: 1; */
+        }
+
+        .item2 {
+            background-color: blueviolet;
+            /* flex-grow: 1; */
+            /* flex-shrink: 1; */
+            align-self: center;
+            
+
+        }
+
+        .item3 {
+            background-color: blueviolet;
+            /* flex-grow: 1; */
+          /* flex-shrink: 5; */
+         
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="items item1">1</div>
+        <div class="items item2">2</div>
+        <div class="items item3">3</div>
+        <div class="items">4</div>
+        <div class="items">5</div>
+        <div class="items">6</div>
+        <div class="items">7</div>
+        <div class="items">8</div>
+        <div class="items">9</div>
+        <div class="items">10</div>
+        <div class="items">1</div>
+        <div class="items">2</div>
+        <div class="items">3</div>
+        <div class="items">4</div>
+        <div class="items">5</div>
+        <div class="items">6</div>
+        <div class="items">7</div>
+        <div class="items">8</div>
+        <div class="items">9</div>
+        <div class="items">10</div>
+
+
+    </div>
+</body>
+
+</html>
