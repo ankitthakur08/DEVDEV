@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>nav bar</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
     <style>
-       
-        nav{
+        nav {
             display: flex;
             justify-content: space-around;
             align-items: center;
@@ -17,54 +20,142 @@
             height: 100px;
             background-color: rgb(212, 192, 231);
         }
-        div img{
+
+        nav img {
             height: 80px;
             width: 70px;
         }
-        li{
-        list-style: none;
-     border: 2px solid rgb(216, 44, 231);
-     margin: 5px;
-     border-radius: 5px;
-     background-color: rgb(73, 36, 209);
-        /* display: flex; */
-        
+      li {
+            list-style: none;
+            border: 2px solid rgb(216, 44, 231);
+            margin: 5px;
+            border-radius: 5px;
+            background-color: rgb(140, 110, 248);
+            /* display: flex; */
+
         }
-        .menu{
+
+        .menu {
             display: flex;
             justify-content: space-between;
-          
+
         }
-        .title{
+
+        /* .title {
             align-self: flex-start;
-        }
-        .img1{
+        } */
+
+        .img1 {
             display: flex;
             align-items: center;
+           
         }
-       body{
-        font-family: "Poppins", sans-serif;
-        background-color: rgb(149, 231, 231);
-       }
+
+        body {
+            font-family: "Poppins", sans-serif;
+            background-color: rgb(42, 44, 44);
+            
+        }
+
+        
+        /* .main1{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        } */
+/*         
+        .left{
+            height: 200px;
+            width: 700px;
+            justify-content: space-between;
+            align-items: center;
+            position:fixed;
+            border: 3px solid black;
+            top: 200px;
+
+           
+        }
+        section  img {
+            height: 350px;
+            width: 550px;
+            display: flex;
+            position:absolute;
+            top: 205px;
+            left: 1000px;
+            border: 5px solid rgb(151, 151, 230);
+            border-radius: 10px;
+        } */ 
+       
+.firstsection{
+    display: flex;
+    justify-content: space-around;
+    margin: 10px 0;
+    
+}
+.firstsection div{
+    width: 50vw;
+}
+
+
+.leftsection{
+ background-color: aqua;
+ margin: 40px;
+
+}
+
+
+.rightsection>img{
+  width: 50vw;
+  height: 80vh;
+  margin: 40px;
+
+}
+
     </style>
 </head>
+
 <body>
-  
+
     <header>
         <nav>
-           
+
             <div class="title">
-                <div class="img1"><img src="images/logo1.png" alt=""> CSS NavBar</div>
-               
+                <img src="images/logo1.png" alt=""> CSS NavBar
+
             </div>
             <div class="menu">
-                <li>home</li>
-                <li>about</li>
-                <li>courses</li>
-                <li>Projects</li>
-                <li>Contact Us</li>
+                <li><a href="" target="_blank">home</a></li>
+                <li><a href="" target="_blank">about</a></li>
+                <li><a href="" target="_blank">courses</a></li>
+                <li><a href="" target="_blank">Projects</a></li>
+                <li><a href="" target="_blank">Contact Us</a></li>
             </div>
         </nav>
     </header>
+<main>
+    <section class="firstsection">
+        <div class="leftsection">
+            hi my name is ankit.
+        </div>
+        <div class="rightsection">
+            <img src="images/cssimg12.png" alt="debloper imege">
+        </div>
+    </section>
+</main>
+
+     <!-- <div class="main1">
+        
+        
+        
+        <section>
+            <div>
+            <div class="left"> <p>hi my name is ankit.</p><p>i m from bangana district una himachal pradesh</p><p> my father name is avtar singh i have two sisiters and mother name is hushma devi </p> </div>
+             <div class="img2"><img src="images/cssimg12.png" alt=""  ></div>
+            </div>
+        </section>
+
+
+     </div> -->
 </body>
+
 </html>
