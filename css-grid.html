@@ -1,11 +1,189 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>css grid</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .container {
+            border: 2px solid black;
+            display: grid;
+            height: 100vh;
+            grid-template-areas: "nav nav nav"
+                "side main float"
+                "footer footer footer";
+            grid-template-rows: 12vh 70vh 18vh;
+            grid-template-columns: 14.5vw 60vw 24.2vw;
+        }
+
+        .item {
+            border: 3px solid green;
+            
+        }
+
+        .item1 {
+            grid-area: nav;
+            display: flex; 
+            align-items: center;
+            justify-content: space-around;
+            background-color: aquamarine;
+           
+           
+        }
+        span{
+            font-size: 2rem;
+            
+        }
+      
+        nav ul{
+            display: flex;
+            /* justify-content: space-around; */
+          justify-content: end;
+          align-items: center;
+        
+          
+        }
+        li{
+            list-style: none;
+            /* border: 2px solid black; */
+            margin: 10px 20px;
+            border-radius: 5px;
+            /* background-color: rgb(159, 227, 236); */
+            font-size: 1.5rem;
+         
+            
+           
+           
+        }
+        nav a{
+            text-decoration: none;
+            color: rgb(21, 153, 76);
+        }
+        nav ul li:hover{
+            cursor: pointer;
+            font-size: 1.2rem;
+            color: rgb(243, 31, 31);
+        }
+         /* .item3{
+             height: 70vh;
+            width: 60vw; 
+           
+            position: relative;
+            border: 5px solid green;
+            
+           
+           
+        } 
+
+       .item3{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+           
+         
+        }  */
+
+        .item5 {
+            grid-area: footer;
+            display: flex;
+            /* justify-content: space-around; */
+            /* align-items: center; */
+            background-color: aquamarine;
+        color: rgb(24, 122, 45);
+        font-size: 2rem;
+        }
+        footer>ul {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+         
+          align-items: center;
+          margin: 30px;
+        }
+        footer ul li{
+            list-style: none;
+            
+        }
+       .item5 img{
+        height: 50px;
+        width: 40px;
+        margin: -5px ;
+       }
+       .copywrite{
+        margin: -80px 400px;
+       }
+      
+    </style>
 </head>
+
 <body>
+    <div class="container">
+        <div class="item item1">
+            <span><h1>Info-Tree</h1></span>
+            <nav>
+            
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/">Category</a></li>
+                <li><a href="/">About</a></li>
+                <li><a href="/">Contact Us</a></li>
+            </ul>
+       
+    </nav>
+        </div>
+        <div class="item item2"><div class="sidebar">
+            <ul>
+                <li><a href="html-101.html" target="Myframe">Html intro</a></li>
+                <li><a href="css-introduction.html" target="Myframe">Css intro</a></li>
+                <li><a href="css-introduction.html" target="Myframe">Css intro</a></li>
+                <li><a href="css-introduction.html" target="Myframe">Css intro</a></li>
+                <li><a href="css-introduction.html" target="Myframe">Css intro</a></li>
+                <li><a href="css-introduction.html" target="Myframe">Css intro</a></li>
+                <li><a href="css-introduction.html" target="Myframe">Css intro</a></li>
+                <li><a href="css-introduction.html" target="Myframe">Css intro</a></li>
+                <li><a href="css-introduction.html" target="Myframe">Css intro</a></li>
+                <li><a href="css-introduction.html" target="Myframe">Css intro</a></li>
+                <li><a href="css-introduction.html" target="Myframe">Css intro</a></li>
+                <li><a href="css-introduction.html" target="Myframe">Css intro</a></li>
+                <li><a href="css-introduction.html" target="Myframe">Css intro</a></li>
+            </ul>
     
+        </div></div>
+        <div class="item item3">
+            <div class="frame">
+  
+                <iframe src="" frameborder="0" name="Myframe" style="height: 70vh; width: 60vw;"> </iframe>
+            </div>
+        </div>
+        <div class="item item4"> 
+             <iframe src="" frameborder="0" name="Myframe"></iframe>
+        </div>
+        <div class="item item5">
+            
+            <h1>Tnfo-tree</h1>
+            <footer>
+                <ul>
+                    <li>career</li>
+                    <li>business</li>
+                    <li>Contact</li>
+                    <li>market</li>
+                    <li>market</li>
+                    <li>market</li>
+                    <li>market</li>
+                    
+                </ul>
+                <div><img src="images/logo1.png" alt=""></div>
+            <div class="copywrite"><em>@copyright2001</em> </div>
+               
+            </footer>
+        </div>
+    </div>
 </body>
+
 </html>
