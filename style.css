@@ -1,0 +1,26 @@
+h1{
+    color: blueviolet;
+}
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.outline{
+    height: 100px;
+    width: 100px;
+    margin: auto;
+    border: 5px solid rgb(0, 255, 76);
+    outline: 5px solid red;
+    outline-offset: 5px;
+    background-color: rgb(143, 143, 233);
+    position: relative;
+    top: 5px;
+  
+}
+.out{
+    background-color: aqua;
+    height: 120px;
+    width: 120px;
+    margin: auto;
+    border: 2px solid black;
+}

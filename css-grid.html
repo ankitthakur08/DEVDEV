@@ -5,7 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>css grid</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
     <style>
+        /* css varible */
+        :root{
+            --color: rgb(238, 139, 205) ;
+
+        }
+
+
         * {
             margin: 0px;
             padding: 0px;
@@ -19,58 +31,75 @@
                 "side main float"
                 "footer footer footer";
             grid-template-rows: 12vh 70vh 18vh;
-            grid-template-columns: 14.5vw 60vw 24.2vw;
+            grid-template-columns: 14.vw 60vw 24.2vw;
+            /* row-gap: 5px;
+            column-gap: 3px; */
         }
 
         .item {
             border: 3px solid green;
-            
+
         }
 
         .item1 {
             grid-area: nav;
-            display: flex; 
+            display: flex;
             align-items: center;
             justify-content: space-around;
             background-color: aquamarine;
-           
-           
+
+
         }
-        span{
+
+
+        span {
             font-size: 2rem;
-            
+
         }
-      
-        nav ul{
+
+        nav ul {
             display: flex;
             /* justify-content: space-around; */
-          justify-content: end;
-          align-items: center;
-        
-          
+            justify-content: end;
+            align-items: center;
+
+
         }
-        li{
+
+        a {
+            text-decoration: none;
+            padding: 30px;
+
+            color: rgb(7, 7, 7);
+
+
+        }
+
+        li {
             list-style: none;
             /* border: 2px solid black; */
             margin: 10px 20px;
             border-radius: 5px;
             /* background-color: rgb(159, 227, 236); */
-            font-size: 1.5rem;
-         
-            
-           
-           
+            /* font-size: 1.5rem; */
+
+
+
+
         }
-        nav a{
+
+        nav a {
             text-decoration: none;
             color: rgb(21, 153, 76);
         }
-        nav ul li:hover{
+
+        nav ul li a:hover {
             cursor: pointer;
             font-size: 1.2rem;
-            color: rgb(243, 31, 31);
+            color: rgb(246, 247, 246);
         }
-         /* .item3{
+
+        /* .item3{
              height: 70vh;
             width: 60vw; 
            
@@ -95,92 +124,157 @@
             /* justify-content: space-around; */
             /* align-items: center; */
             background-color: aquamarine;
-        color: rgb(24, 122, 45);
-        font-size: 2rem;
+            color: rgb(24, 122, 45);
+            /* font-size: 1rem; */
         }
+
         footer>ul {
             display: flex;
             flex-direction: row;
             justify-content: flex-end;
-         
-          align-items: center;
-          margin: 30px;
+            align-items: center;
+            margin: 40px;
         }
-        footer ul li{
+
+        footer ul li a:hover{
             list-style: none;
-            
+            cursor: pointer;
+            color: whitesmoke;
+
+
         }
-       .item5 img{
-        height: 50px;
-        width: 40px;
-        margin: -5px ;
-       }
-       .copywrite{
-        margin: -80px 400px;
-       }
-      
+
+        h3 {
+            margin-top: 100px;
+
+            margin-left: 450px;
+        }
+
+        .img1 {
+            margin-left: 50px;
+        }
+
+        .img2 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* margin-right: -50px; */
+
+        }
+
+        .item2 {
+            grid-area: side;
+            background-color: rgb(194, 145, 240);
+            overflow: auto;
+            
+
+        }
+
+        /* .item2>ul{
+            margin: auto;
+         } */
+        .item3 {
+            grid-area: main;
+            background-color: rgb(194, 145, 240);
+        }
+
+        .item4 {
+            grid-area: float;
+            background-color: rgb(194, 145, 240);
+        }
+
+        .sidebar>ul {
+            margin: 50px 20px 0 30px;
+
+
+
+        }
+
+        body {
+            background-color: var(--color);
+            font-family: "Poppins", sans-serif;
+        }
+
+        .item2 ul li a:hover {
+            cursor: pointer;
+            /* font-size: 1.2rem; */
+            color: rgb(246, 247, 246);
+
+        }
     </style>
 </head>
 
 <body>
+
     <div class="container">
         <div class="item item1">
-            <span><h1>Info-Tree</h1></span>
+            <span>
+
+                <div class="img2">
+                    <img src="images/tree.png.crdownload.png" alt="" height="60px" width="80px">
+                    <h1>Info-Tree</h1>
+
+                </div>
+            </span>
             <nav>
-            
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/">Category</a></li>
-                <li><a href="/">About</a></li>
-                <li><a href="/">Contact Us</a></li>
-            </ul>
-       
-    </nav>
+
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/">Category</a></li>
+                    <li><a href="/">About</a></li>
+                    <li><a href="/">Contact Us</a></li>
+                </ul>
+
+            </nav>
         </div>
-        <div class="item item2"><div class="sidebar">
-            <ul>
-                <li><a href="html-101.html" target="Myframe">Html intro</a></li>
-                <li><a href="css-introduction.html" target="Myframe">Css intro</a></li>
-                <li><a href="css-introduction.html" target="Myframe">Css intro</a></li>
-                <li><a href="css-introduction.html" target="Myframe">Css intro</a></li>
-                <li><a href="css-introduction.html" target="Myframe">Css intro</a></li>
-                <li><a href="css-introduction.html" target="Myframe">Css intro</a></li>
-                <li><a href="css-introduction.html" target="Myframe">Css intro</a></li>
-                <li><a href="css-introduction.html" target="Myframe">Css intro</a></li>
-                <li><a href="css-introduction.html" target="Myframe">Css intro</a></li>
-                <li><a href="css-introduction.html" target="Myframe">Css intro</a></li>
-                <li><a href="css-introduction.html" target="Myframe">Css intro</a></li>
-                <li><a href="css-introduction.html" target="Myframe">Css intro</a></li>
-                <li><a href="css-introduction.html" target="Myframe">Css intro</a></li>
-            </ul>
-    
-        </div></div>
+        <div class="item item2">
+            <div class="sidebar">
+                <ul>
+                    <li><a href="html-101.html" target="Myframe">Html intro</a></li>
+                    <li><a href="css-introduction.html" target="Myframe">Css intro</a></li>
+                    <li><a href="css-introduction.html" target="Myframe">Css intro</a></li>
+                    <li><a href="css-introduction.html" target="Myframe">Css intro</a></li>
+                    <li><a href="css-introduction.html" target="Myframe">Css intro</a></li>
+                    <li><a href="css-introduction.html" target="Myframe">Css intro</a></li>
+                    <li><a href="css-introduction.html" target="Myframe">Css intro</a></li>
+                    <li><a href="css-introduction.html" target="Myframe">Css intro</a></li>
+                    <li><a href="css-introduction.html" target="Myframe">Css intro</a></li>
+                    <li><a href="css-introduction.html" target="Myframe">Css intro</a></li>
+                    <li><a href="css-introduction.html" target="Myframe">Css intro</a></li>
+                    <li><a href="css-introduction.html" target="Myframe">Css intro</a></li>
+                    <li><a href="iframe-img.html" target="Myframe">Css intro</a></li>
+
+                    <li><a href="iframe-img.html" target="Myframe2">Css intro</a></li>
+                </ul>
+
+            </div>
+        </div>
         <div class="item item3">
             <div class="frame">
-  
+
                 <iframe src="" frameborder="0" name="Myframe" style="height: 70vh; width: 60vw;"> </iframe>
             </div>
         </div>
-        <div class="item item4"> 
-             <iframe src="" frameborder="0" name="Myframe"></iframe>
+        <div class="item item4">
+            <iframe src="" frameborder="2" name="Myframe2" style="height: 70vh; width: 23.6vw;"></iframe>
         </div>
         <div class="item item5">
-            
-            <h1>Tnfo-tree</h1>
+            <div class="img1">
+                <h2>Info-tree</h2>
+                <img src="images/tree.png.crdownload.png" alt="" height="80px" width="130px ">
+            </div>
+            <h3>@copyright2011</h3>
             <footer>
                 <ul>
-                    <li>career</li>
-                    <li>business</li>
-                    <li>Contact</li>
-                    <li>market</li>
-                    <li>market</li>
-                    <li>market</li>
-                    <li>market</li>
-                    
+                    <li><a href="">Career</a></li>
+                    <li><a href="">Business</a></li>
+                    <li><a href="">Contact</a></li>
+                    <li><a href="">Market</a></li>
+                    <li><a href="">Market</a></li>
+                  
                 </ul>
-                <div><img src="images/logo1.png" alt=""></div>
-            <div class="copywrite"><em>@copyright2001</em> </div>
-               
+
+
             </footer>
         </div>
     </div>
