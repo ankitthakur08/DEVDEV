@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    html, body, .parent {
+        overflow: hidden;
+        width: calc(100vw - 16px);
+      }
+      
+      .parent span {
+        animation: move 7s linear 0s infinite;
+        position: absolute;
+        white-space: nowrap;
+        overflow: hidden;
+      }
+      
+      .second {
+        margin-left: 820px;
+      }
+      
+      
+      @keyframes move {
+        0% {
+          transform: translate(0,0);
+        }
+        100% {
+          transform: translate(-820px,0);
+        }
+      }
+    </style>
+</head>
+<body>
+    <div class = 'parent'>
+        <span class= 'first'>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam posuere rhoncus velit, vel faucibus risus cursus commodo.
+        </span>
+        <span class= 'second'>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam posuere rhoncus velit, vel faucibus risus cursus commodo.
+        </span>
+      </div>
+</body>
+</html>

@@ -16,11 +16,11 @@
             align-items: center;
             border: 3px solid rgb(40, 41, 40);
             height: 100px;
-            background-color: rgb(212, 192, 231);
+            background-color: rgb(87, 180, 87);
         }
 
         nav img {
-            height: 80px;
+            height: 60px;
             width: 70px;
         }
       li {
@@ -28,14 +28,16 @@
             border: 2px solid rgb(216, 44, 231);
             margin: 10px;
             border-radius: 5px;
-            background-color: rgb(221, 132, 194);
+            /* background-color: rgb(221, 132, 194); */
             /* display: flex; */
+            border:none;
 
         }
 
         .menu {
             display: flex;
             justify-content: space-between;
+            border: none;
 
         }
 
@@ -88,17 +90,21 @@
     display: flex;
     justify-content: space-around;
     margin: 0px ;
+   
     
 }
-.firstsection div{
+/* .firstsection div{
     width: 40vw;
-    height: 70vh;
-}
+    height: 40vh;
+    
+} */
 
 
 .leftsection{
- background-color: rgb(246, 247, 247);
+ /* background-color: rgb(246, 247, 247); */
  margin:20px;
+ /* overflow: scroll; */
+ font-size: 1.3rem;
 
 }
 
@@ -112,6 +118,9 @@
   margin-right: 20px; */
 
 }
+.name{
+    color: green;
+}
 
     </style>
 </head>
@@ -122,13 +131,13 @@
         <nav>
 
             <div class="title">
-                <img src="images/logo1.png" alt=""> CSS NavBar
+                <!-- <img src="images/logo1.png" alt="">--> <h3> Port-Folio </h3>
 
             </div>
             <div class="menu">
-                <li><a href="" target="_blank">home</a></li>
-                <li><a href="" target="_blank">about</a></li>
-                <li><a href="" target="_blank">courses</a></li>
+                <li><a href="" target="_blank">Home</a></li>
+                <li><a href="" target="_blank">About</a></li>
+                <li><a href="" target="_blank">Courses</a></li>
                 <li><a href="" target="_blank">Projects</a></li>
                 <li><a href="" target="_blank">Contact Us</a></li>
             </div>
@@ -137,7 +146,9 @@
 <main>
     <section class="firstsection">
         <div class="leftsection">
-            hi my name is ankit. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio nobis sequi exercitationem atque ipsam ut praesentium vel perspiciatis consequatur vitae dolores magni, doloribus, beatae quam perferendis, debitis impedit minima error maiores est? Saepe, nam harum. Totam eos similique dignissimos sed, fugiat accusantium quam sit consectetur velit aliquam deserunt illum vitae vel ipsum obcaecati voluptas fugit? Pariatur nemo est nobis veritatis modi illo qui error temporibus autem porro? Tempore, dicta vitae aspernatur officia quas architecto odit tenetur expedita doloremque aliquam dolore facere provident ipsum natus ratione, officiis, qui quisquam esse voluptate perferendis impedit. Totam, necessitatibus nemo dicta ut sequi asperiores ratione incidunt inventore sit blanditiis. Vel officiis saepe sunt ad tempore libero, aut repellat illum! Perspiciatis laboriosam similique ab. Tempore quae, eius amet commodi minima qui ipsum asperiores quia nesciunt earum quo eos, molestiae doloremque exercitationem repudiandae soluta repellat voluptate! Ullam dolore vitae dolor illo eaque adipisci dolores amet harum beatae incidunt minima et aut explicabo praesentium, voluptate tempora nulla ut voluptatum suscipit corporis possimus. Nisi, saepe repellendus. Eos cumque debitis tenetur magni natus quaerat ab quo a eaque nostrum eius perferendis quisquam unde illum ipsam aperiam error, sunt voluptas perspiciatis animi. Totam quas vel, maxime sunt sint ipsa sequi rem!
+            Hi i am   <span class="name">ankit</span>
+           <div>i am a  </div>
+            <span id="element"></span>
         </div>
         <div class="rightsection">
             <img src="images/css33-removebg-preview.png" alt="debloper imege">
@@ -158,6 +169,15 @@
 
 
      </div> -->
+     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+     <!-- Setup and start animation! -->
+     <script>
+       var typed = new Typed('#element', {
+         strings: ['Web devloper','cricketer',],
+         typeSpeed: 50,
+       });
+     </script>
 </body>
 
 </html>

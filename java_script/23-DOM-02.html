@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script src="22-DOM-01.js"></script> -->
+    <style>
+        *{
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bg-black">
+        <h1 id="title" class="heading">This is a heading <span style="display: none;">This is hidden</span></h1>
+        <h2>Lorem ipsum dolor sit amet consectetur.</h2>
+        <h2>h2 2nd dolor sit amet consectetur adipisicing elit.</h2>
+        <h2>3rd h2 ipsum.</h2>
+        <p>This is the para</p>
+<!-- 
+        <input type="text" name="" id="">
+        <input type="password" name="" id=""> -->
+
+        <ul>
+            <li class="item">1</li>
+            <li class="item">This is 2nd list</li>
+            <li class="item">3</li>
+            <li class="item">4</li>
+        </ul>
+
+    </div>
+    <script>
+        const title = document.getElementById('title');   //returns <h1 id="title" class="heading">This is a heading</h1>
+        console.log(title);
+        console.log(document.getElementById('title').id);
+        console.log(document.getElementById('title').className);;
+        console.log(document.getElementById('title').getAttribute('id'));
+         // all classes & id's in a collection. and collection is not an array.
+       console.log(document.getElementById('title').getAttribute('class')); 
+       ///below code will override the previous class
+       document.getElementById('title').setAttribute('heading','test');
+       // it will ensure previous and newly added class
+       document.getElementById('title').setAttribute('heading','heading test'); 
+
+       //changing/adding CSS properties
+       title.style.backgroundColor='green';
+       title.style.padding= '20px';
+       title.style.borderRadius="20px";
+
+       //accesing the text inside an tag or element
+       console.log(title.innerText); //only the visible text content
+       console.log(title.textContent);  //all text including display hidden texts also
+       console.log(title.innerHTML);    //all the text including any tags inside title 
+
+
+       //querySelectors= we can pass tag,class,id, attribute
+       //tag
+       const allh2= document.querySelector('h2');
+       console.log(allh2);   //1st h2 tag
+
+       //class
+       const allh2s= document.querySelector('.heading');
+       console.log(allh2s);
+       //id
+       const title2= document.querySelector('#title');
+       console.log(title2);
+       //attribute
+       const title3= document.querySelector('[id="title"]');
+       console.log(title3);
+
+    //    const pass = document.querySelector('input[type="password"]');
+    //    console.log(pass);
+
+       //Selecting All tags/childs
+       const allChild= document.querySelector('ul');
+       console.log(allChild);
+       const turnGreen = allChild.querySelector('li'); //first list
+       turnGreen.style.backgroundColor='green';
+       //change the inner text of turn greens
+       turnGreen.innerText= 'this is green'
+
+       const childList= document.querySelectorAll('li');
+       console.log(childList);  //NodeList(4) [li, li, li, li]
+       //change the color of 2nd list to red
+       //NodeList is not an array, but it works with some array properties
+       childList[1].style.color = 'red';
+
+       //OR use forEach to loop through the nodeList
+       childList.forEach( (item) => {
+                item.style.color = 'red';
+       })
+
+       //html collection of all classes opf item
+       const items = document.getElementsByClassName('item');
+       console.log(items);  //HTMLCollection(4) [li.item, li.item, li.item, li.item]
+       //in order to loop through we must convert the collection to array
+       const itemsArr = Array.from(items)
+       console.log(itemsArr);
+
+    //    itemsArr.forEach(function (){
+
+    //    })
+
+
+
+
+
+
+
+    //    //first child
+    //    const firstChild = document.querySelector('ul:first-child');
+
+    //    //2nd child
+    //    const secondChild = document.querySelector('ul li:nth-child(2)');
+    //    console.log(secondChild);
+
+
+
+
+    </script>
+</body>
+
+</html>

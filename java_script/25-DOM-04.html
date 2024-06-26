@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="lang">
+        <li>javascript</li>
+    </ul>
+
+
+    <script>
+
+        //adding an element
+        function addLang(langName) {
+            const li = document.createElement('li');
+            li.innerHTML = `${langName}`  //it traverse whole DOM tree, so not optimized
+            const ul = document.querySelector('.lang')
+            ul.appendChild(li)
+
+        }
+        addLang('Python')
+        addLang('Python-3.12')
+
+        function addLangOptimized(langName) {
+            const li = document.createElement('li');
+            li.appendChild(document.createTextNode(langName));
+            document.querySelector('.lang').appendChild(li)
+        }
+        addLangOptimized('Java - 21')
+        
+
+        //Edit the added the element
+        const secondLang = document.querySelector('li:nth-child(2)');
+        // secondLang.innerHTML = "golang" 
+        //create a new li and replaceWith 
+        const newLi = document.createElement('li');
+        // console.log(newLi);
+        newLi.textContent = "golang";
+        console.log(newLi);
+        secondLang.replaceWith(newLi)
+// OR
+        const firstLang = document.querySelector("li:first-child");
+        firstLang.outerHTML = "<li>Another lang</li>"
+
+        //Remove 
+        const lastLang = document.querySelector("li:last-child");
+        lastLang.remove();  //comment and uncomment to see the changes made
+
+
+
+    </script>
+</body>
+
+</html>
